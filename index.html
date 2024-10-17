@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexGenAcc</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .display-4 {
+            font-family: Basketball;
+        }
+
+        .lead {
+            font-family: Basketball;
+        }
+
+        .nav-link {
+            font-family: Basketball;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-family: Basketball;
+        }
+
+        .container {
+            font-family: Basketball;
+            position: relative;
+            margin-top: 25px;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .contribution {
+            border-radius: 50%;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            aspect-ratio: 2 / 2
+        }
+
+        .contribution img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            /* Ensures the image covers the 4x6 ratio without distortion */
+            max-height: 100%;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        .card-text {
+            font-family: Arial, sans-serif;
+        }
+
+        .text-center1 {
+            font-family: Arial, sans-serif;
+        }
+
+        .mt-3 {
+            font-family: Arial, sans-serif;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex; /* make the layout of the page responsive*/
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            /* Adjust transparency */
+            color: white;
+        }
+
+        .product-section {
+            padding: 50px 0;
+        }
+
+        .product-section .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-section .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" data-aos="fade-down">
+        <iframe src="https://giphy.com/embed/KHtWcGzKMkn153X7kA" width="50" height="50" style="" frameBorder="0"
+            class="giphy-embed" allowFullScreen></iframe>
+        <a class="navbar-brand" href="#">NexGenAcc</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Keyboards.html">Keyboards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Mice.html">Mouses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Headsets.html">Headsets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Controllers.html">Controllers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Microphones.html">Microphones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Monitor.html">Monitors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact</a>
+                </li>
+            </ul>
+            <iframe src="https://giphy.com/embed/KHtWcGzKMkn153X7kA" width="50" height="50" frameBorder="0"
+                class="giphy-embed" allowFullScreen></iframe>
+        </div>
+    </nav>
+
+    <!-- banner Section -->
+    <div class="jumbotron-fluid text-center" data-aos="fade-up">
+        <div class="container p-0">
+            <img src="image/dk copy.png" alt="" class="img-fluid w-100">
+            <div class="overlay">
+                <div class="container">
+                    <h1 class="display-4" data-aos="fade-down" data-aos-delay="500">Welcome to NexGenAcc</h1>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="600">Your one-stop shop for all computer
+                        accessories</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <div id="products" class="container">
+        <div class="product-section">
+            <h2 class="text-center my-4" data-aos="fade-up" data-aos-delay="300">Our Products</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card">
+                        <img src="image/ProductImage_MAXFIT67Black copy.png" class="card-img-top" alt="Keyboard">
+                        <div class="card-body">
+                            <h5 class="card-title">Keyboards</h5>
+                            <p class="card-text">High-quality mechanical keyboards for gamers and typists.</p>
+                            <a href="Keyboards.html" class="btn btn-primary">Description</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="card">
+                        <img src="image/ko.jpg" class="card-img-top" alt="Mouse">
+                        <div class="card-body">
+                            <h5 class="card-title">Mouse</h5>
+                            <p class="card-text">Precision and comfort for every user with high-end technology.</p>
+                            <a href="Mice.html" class="btn btn-primary">Description</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="card">
+                        <img src="image/kol.jpg" class="card-img-top" alt="Headset">
+                        <div class="card-body">
+                            <h5 class="card-title">Headsets</h5>
+                            <p class="card-text">Crystal clear sound quality for an immersive experience.</p>
+                            <a href="Headsets.html" class="btn btn-primary">Description</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="card">
+                        <img src="image/Controllers.png" class="card-img-top" alt="Headset">
+                        <div class="card-body">
+                            <h5 class="card-title">Controllers</h5>
+                            <p class="card-text">The best handheld remote for many generations.</p>
+                            <a href="Controllers.html" class="btn btn-primary">Description</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="card">
+                        <img src="image/Micrphone.png" class="card-img-top" alt="Headset">
+                        <div class="card-body">
+                            <h5 class="card-title">Microphones</h5>
+                            <p class="card-text">Providing the best voice for gamers for communication.</p>
+                            <a href="Microphones.html" class="btn btn-primary">Description</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="card">
+                        <img src="image/Monitors.png" class="card-img-top" alt="Headset">
+                        <div class="card-body">
+                            <h5 class="card-title">Monitors</h5>
+                            <p class="card-text">Modern Era with high high-resolution monitors.</p>
+                            <a href="Headsets.html" class="btn btn-primary">Description</a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="container my-5">
+        <h2 class="text-center" data-aos="fade-up">About Us</h2>
+        <p class="text-center1" data-aos="fade-up" data-aos-delay="100">NexGenAcc is dedicated to providing the best
+            computer accessories to enhance your computing experience. Our products are designed with precision and
+            quality in mind to meet the needs of both casual users and professionals. At NexGenAcc, we are passionate
+            about enhancing your computing experience with top-tier computer accessories. Our mission is to provide
+            products that blend cutting-edge technology, durability, and ergonomic design to cater to both casual users
+            and professionals. We prioritize quality above all, ensuring each accessory undergoes rigorous testing to
+            meet our high standards. Whether it's a keyboard, mouse, monitor, or any other peripheral, you can trust
+            that it's built to last and perform at its best. Our design team is always on the lookout for the latest
+            trends and technological advancements, providing accessories that not only perform exceptionally but also
+            look great on your desk. We offer a wide range of products to suit various preferences and requirements,
+            from gaming enthusiasts needing precision and speed to professionals requiring comfort for long hours of
+            work. Comfort is key, and our ergonomic designs help reduce strain and increase productivity with features
+            like adjustable heights, cushioned wrist rests, and customizable settings. We integrate the latest
+            technology into our accessories, ensuring you have wireless connectivity, programmable buttons, or
+            high-resolution displays to keep you ahead of the curve. Our dedicated customer service team is always ready
+            to assist you with any queries or issues, offering comprehensive warranties and hassle-free returns to
+            ensure your satisfaction. Additionally, we are committed to sustainable practices, from eco-friendly
+            packaging to energy-efficient products, striving to minimize our environmental footprint. Choose NexGenAcc
+            for computer accessories that not only meet but exceed your expectations, and experience the perfect blend
+            of technology, quality, and comfort.</p>
+    </div>
+
+    <!-- Contribution Section -->
+    <div class="container my-5">
+        <h2 class="text-center" data-aos="fade-up">Our Contributions</h2>
+        <div class="row">
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="contribution text-center">
+                    <img src="image/koll.jpg" alt="Workers">
+                    <p class="mt-3">"VongMeng"</p>
+                    <p class="font-weight-bold">- Leader</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="contribution text-center">
+                    <img src="image/koi.jpg" alt="Workers">
+                    <p class="mt-3">"Mengheang"</p>
+                    <p class="font-weight-bold">- Member</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="contribution text-center">
+                    <img src="image/ko1.jpg" alt="Workers">
+                    <p class="mt-3">"Kunthy"</p>
+                    <p class="font-weight-bold">- Member</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="contribution text-center">
+                    <img src="image/koii.jpg" alt="Workers">
+                    <p class="mt-3">"Somaly"</p>
+                    <p class="font-weight-bold">- Member</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="container my-5">
+        <h2 class="text-center" data-aos="fade-up">Contact Us</h2>
+        <form data-aos="fade-up" data-aos-delay="100">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Your Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Your Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputMessage">Message</label>
+                <textarea class="form-control" id="inputMessage" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container p-4" data-aos="fade-up">
+            <p>Copyright 2024 NexGenAcc. All rights reserved.</p>
+            <p>Follow us on
+            <div class="socialIcons">
+                <a href="https://web.facebook.com/TaingVongMeng"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/vme.ng/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@vongmeng"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            </p>
+        </div>
+        
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
+</body>
+
+</html>

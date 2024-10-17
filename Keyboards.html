@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexGenAcc</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .nav-link {
+            font-family: Basketball;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-family: Basketball;
+        }
+
+        .container {
+            font-family: Basketball;
+            position: relative;
+            margin-top: 25px;
+        }
+
+        .card-img-top {
+            max-width: 200px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-top: 20%;
+            display: flex;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        .card-text {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .text-center1 {
+            font-family: Arial, sans-serif;
+        }
+
+        .mt-3 {
+            font-family: Arial, sans-serif;
+        }
+
+        .product-section {
+            padding: 50px 0;
+        }
+
+        .card {
+            transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease-in-out;
+            width: 100%;
+            overflow: hidden; /* Prevents overflow issues */
+        }
+        
+        .card {
+            transition: transform 0.5s ease-in-out;
+            max-width: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            height: auto;
+            overflow: hidden;
+        }
+        
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .card-details {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+            overflow: scroll;
+            padding: 50px;
+            margin-right: 100%;
+        }
+        
+        .card-container:hover .card {
+            transform: translateX(-50%);
+        }
+        
+        .card-container:hover .card-details {
+            left: 50%;
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+            }
+        
+            .card-details {
+                position: static;
+                opacity: 1;
+                width: 100%;
+                margin-top: 20px;
+                transform: none;
+                left: 0; /* Reset left position */
+                
+            }
+        
+            .card-container:hover .card {
+                transform: none;
+                
+            }
+        }
+        
+        .card-details {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 50%; /* Adjusted width to fit text better */
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+            font-size: 0.9rem; /* Slightly smaller text size */
+            line-height: 1.4; /* Improved line spacing */
+            overflow-y: auto; /* Allows scrolling if content overflows */
+        }
+        
+        .card-container:hover .card-details {
+            left: 50%;
+            opacity: 1;
+        }
+        
+        .card-details h2 {
+            font-size: 1.2rem; /* Adjust heading size */
+            margin-bottom: 10px;
+        }
+        
+        .card-details p {
+            margin-bottom: 10px;
+        }
+        
+        .card-container {
+            overflow: hidden; /* Ensure content doesn't overflow */
+        }
+        
+        .card-body {
+            padding: 20px;
+            font-size: 1rem; /* Consistent font size */
+        }
+        
+        @media (max-width: 768px) {
+            .card-details {
+                position: static;
+                opacity: 1;
+                width: 100%;
+                margin-top: 20px;
+                transform: none;
+                left: 0;
+                font-size: 1rem; /* Adjust font size for smaller screens */
+            }
+        
+            .card-details h2 {
+                font-size: 1.4rem;
+            }
+        
+            .card-container:hover .card {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" data-aos="fade-down">
+        <iframe src="https://giphy.com/embed/KHtWcGzKMkn153X7kA" width="50" height="50" style="" frameBorder="0"
+            class="giphy-embed" allowFullScreen></iframe>
+        <a class="navbar-brand" href="#">NexGenAcc</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Keyboards.html">Keyboards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Mice.html">Mouses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Headsets.html">Headsets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Controllers.html">Controllers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Microphones.html">Microphones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Monitor.html">Monitors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact</a>
+                </li>
+            </ul>
+            <iframe src="https://giphy.com/embed/KHtWcGzKMkn153X7kA" width="50" height="50" frameBorder="0"
+                class="giphy-embed" allowFullScreen></iframe>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <div id="products" class="container">
+        <div class="row justify-content-center">
+            <!-- Product Column -->
+            <div class="col-md-8 product-section">
+                <h2 class="text-left my-4" data-aos="fade-up" data-aos-delay="300">Keyboards</h2>
+                <div class="d-flex justify-content-center">
+                    <div class="card-container" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="card h-100">
+                            <img src="image/ProductImage_MAXFIT67Black copy.png" class="card-img-top" alt="Keyboard">
+                            <div class="card-body">
+                                <h5 class="card-title">Fantech</h5>
+                                <p class="card-text">"Fantech keyboards offer unmatched quality and value, combining
+                                    durability, and performance."</p>
+                                <a href="#" class="btn btn-primary">Buy Now!</a>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <h2 class="text-left">Details</h2>
+                            <p class="text-right1">
+                                <b>Performance:</b><br>
+
+                                <b>-Durable Materials:</b> Built to withstand heavy use.<br>
+                                <b>-Responsive Mechanical Switches:</b> Various options for tactile feedback. <br>
+                                <b>-Customizable RGB Lighting:</b> Personalize your setup. <br>
+                                <b>-Advanced Anti-Ghosting and Key Rollover:</b> Ensures accurate keystrokes. <br>
+                                <b>-Programmable Keys:</b> Custom macros for enhanced productivity and gaming. <br>
+                                <b>-Ergonomic Design:</b> Comfortable for long-term use. <br>
+
+                                <b>Price:</b><br>
+                                <b>-Entry-Level Models:</b> $30 - $50 <br>
+                                Essential features
+                                Reliable performance. <br>
+                                <b>-Mid-Range Models:</b> $60 - $100
+                                Enhanced functionalities
+                                More robust build quality. <br>
+                                <b>-High-End Models:</b> $100 - $150+
+                                Premium materials
+                                Advanced features such as dedicated macro keys and detachable wrist rests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="products" class="container">
+        <div class="row justify-content-center">
+            <!-- Product Column -->
+            <div class="col-md-8 product-section">
+                <h2 class="text-left my-4" data-aos="fade-up" data-aos-delay="300">Keyboards</h2>
+                <div class="d-flex justify-content-center">
+                    <div class="card-container" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="card h-100">
+                            <img src="image/o copy.png" class="card-img-top" alt="Keyboard">
+                            <div class="card-body">
+                                <h5 class="card-title">Razer</h5>
+                                <p class="card-text">"Razer keyboards offer unmatched quality and value, combining
+                                    durability, and performance."</p>
+                                <a href="#" class="btn btn-primary">Buy Now!</a>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <h2 class="text-left">Details</h2>
+                            <p class="text-right1">
+                                <b>Performance:</b><br>
+
+                                <b>-Durable Materials:</b> Built to withstand heavy use.<br>
+                                <b>-Responsive Mechanical Switches:</b> Various options for tactile feedback. <br>
+                                <b>-Customizable RGB Lighting:</b> Personalize your setup. <br>
+                                <b>-Advanced Anti-Ghosting and Key Rollover:</b> Ensures accurate keystrokes. <br>
+                                <b>-Programmable Keys:</b> Custom macros for enhanced productivity and gaming. <br>
+                                <b>-Ergonomic Design:</b> Comfortable for long-term use. <br>
+
+                                <b>Price:</b><br>
+                                <b>-Entry-Level Models:</b> $30 - $50 <br>
+                                Essential features
+                                Reliable performance. <br>
+                                <b>-Mid-Range Models:</b> $60 - $100
+                                Enhanced functionalities
+                                More robust build quality. <br>
+                                <b>-High-End Models:</b> $100 - $150+
+                                Premium materials
+                                Advanced features such as dedicated macro keys and detachable wrist rests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="products" class="container">
+        <div class="row justify-content-center">
+            <!-- Product Column -->
+            <div class="col-md-8 product-section">
+                <h2 class="text-left my-4" data-aos="fade-up" data-aos-delay="300">Keyboards</h2>
+                <div class="d-flex justify-content-center">
+                    <div class="card-container" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="card h-100">
+                            <img src="image/01 copy.png" class="card-img-top" alt="Keyboard">
+                            <div class="card-body">
+                                <h5 class="card-title">Redragon</h5>
+                                <p class="card-text">"Redragon keyboards offer unmatched quality and value, combining
+                                    durability, and performance."</p>
+                                <a href="#" class="btn btn-primary">Buy Now!</a>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <h2 class="text-left">Details</h2>
+                            <p class="text-right1">
+                                <b>Performance:</b><br>
+
+                                <b>-Durable Materials:</b> Built to withstand heavy use.<br>
+                                <b>-Responsive Mechanical Switches:</b> Various options for tactile feedback. <br>
+                                <b>-Customizable RGB Lighting:</b> Personalize your setup. <br>
+                                <b>-Advanced Anti-Ghosting and Key Rollover:</b> Ensures accurate keystrokes. <br>
+                                <b>-Programmable Keys:</b> Custom macros for enhanced productivity and gaming. <br>
+                                <b>-Ergonomic Design:</b> Comfortable for long-term use. <br>
+
+                                <b>Price:</b><br>
+                                <b>-Entry-Level Models:</b> $30 - $50 <br>
+                                Essential features
+                                Reliable performance. <br>
+                                <b>-Mid-Range Models:</b> $60 - $100
+                                Enhanced functionalities
+                                More robust build quality. <br>
+                                <b>-High-End Models:</b> $100 - $150+
+                                Premium materials
+                                Advanced features such as dedicated macro keys and detachable wrist rests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="products" class="container">
+        <div class="row justify-content-center">
+            <!-- Product Column -->
+            <div class="col-md-8 product-section">
+                <h2 class="text-left my-4" data-aos="fade-up" data-aos-delay="300">Keyboards</h2>
+                <div class="d-flex justify-content-center">
+                    <div class="card-container" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="card h-100">
+                            <img src="image/2514b279e69c7c8de8990cceed2e0ac1.jpg" class="card-img-top" alt="Keyboard">
+                            <div class="card-body">
+                                <h5 class="card-title">Akko</h5>
+                                <p class="card-text">"Akko keyboards offer unmatched quality and value, combining
+                                    durability, and performance."</p>
+                                <a href="#" class="btn btn-primary">Buy Now!</a>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <h2 class="text-left">Details</h2>
+                            <p class="text-right1">
+                                <b>Performance:</b><br>
+
+                                <b>-Durable Materials:</b> Built to withstand heavy use.<br>
+                                <b>-Responsive Mechanical Switches:</b> Various options for tactile feedback. <br>
+                                <b>-Customizable RGB Lighting:</b> Personalize your setup. <br>
+                                <b>-Advanced Anti-Ghosting and Key Rollover:</b> Ensures accurate keystrokes. <br>
+                                <b>-Programmable Keys:</b> Custom macros for enhanced productivity and gaming. <br>
+                                <b>-Ergonomic Design:</b> Comfortable for long-term use. <br>
+
+                                <b>Price:</b><br>
+                                <b>-Entry-Level Models:</b> $30 - $50 <br>
+                                Essential features
+                                Reliable performance. <br>
+                                <b>-Mid-Range Models:</b> $60 - $100
+                                Enhanced functionalities
+                                More robust build quality. <br>
+                                <b>-High-End Models:</b> $100 - $150+
+                                Premium materials
+                                Advanced features such as dedicated macro keys and detachable wrist rests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="products" class="container">
+        <div class="row justify-content-center">
+            <!-- Product Column -->
+            <div class="col-md-8 product-section">
+                <h2 class="text-left my-4" data-aos="fade-up" data-aos-delay="300">Keyboards</h2>
+                <div class="d-flex justify-content-center">
+                    <div class="card-container" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="card h-100">
+                            <img src="image/ty.png" class="card-img-top" alt="Keyboard">
+                            <div class="card-body">
+                                <h5 class="card-title">Logitech</h5>
+                                <p class="card-text">"Logitech keyboards offer unmatched quality and value, combining
+                                    durability, and performance."</p>
+                                <a href="#" class="btn btn-primary">Buy Now!</a>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <h2 class="text-left">Details</h2>
+                            <p class="text-right1">
+                                <b>Performance:</b><br>
+
+                                <b>-Durable Materials:</b> Built to withstand heavy use.<br>
+                                <b>-Responsive Mechanical Switches:</b> Various options for tactile feedback. <br>
+                                <b>-Customizable RGB Lighting:</b> Personalize your setup. <br>
+                                <b>-Advanced Anti-Ghosting and Key Rollover:</b> Ensures accurate keystrokes. <br>
+                                <b>-Programmable Keys:</b> Custom macros for enhanced productivity and gaming. <br>
+                                <b>-Ergonomic Design:</b> Comfortable for long-term use. <br>
+
+                                <b>Price:</b><br>
+                                <b>-Entry-Level Models:</b> $30 - $50 <br>
+                                Essential features
+                                Reliable performance. <br>
+                                <b>-Mid-Range Models:</b> $60 - $100
+                                Enhanced functionalities
+                                More robust build quality. <br>
+                                <b>-High-End Models:</b> $100 - $150+
+                                Premium materials
+                                Advanced features such as dedicated macro keys and detachable wrist rests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="products" class="container">
+        <div class="row justify-content-center">
+            <!-- Product Column -->
+            <div class="col-md-8 product-section">
+                <h2 class="text-left my-4" data-aos="fade-up" data-aos-delay="300">Keyboards</h2>
+                <div class="d-flex justify-content-center">
+                    <div class="card-container" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="card h-100">
+                            <img src="image/pop1.png" class="card-img-top" alt="Keyboard">
+                            <div class="card-body">
+                                <h5 class="card-title">Cherry</h5>
+                                <p class="card-text">"Cherry keyboards offer unmatched quality and value, combining
+                                    durability, and performance."</p>
+                                <a href="#" class="btn btn-primary">Buy Now!</a>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <h2 class="text-left">Details</h2>
+                            <p class="text-right1">
+                                <b>Performance:</b><br>
+
+                                <b>-Durable Materials:</b> Built to withstand heavy use.<br>
+                                <b>-Responsive Mechanical Switches:</b> Various options for tactile feedback. <br>
+                                <b>-Customizable RGB Lighting:</b> Personalize your setup. <br>
+                                <b>-Advanced Anti-Ghosting and Key Rollover:</b> Ensures accurate keystrokes. <br>
+                                <b>-Programmable Keys:</b> Custom macros for enhanced productivity and gaming. <br>
+                                <b>-Ergonomic Design:</b> Comfortable for long-term use. <br>
+
+                                <b>Price:</b><br>
+                                <b>-Entry-Level Models:</b> $30 - $50 <br>
+                                Essential features
+                                Reliable performance. <br>
+                                <b>-Mid-Range Models:</b> $60 - $100
+                                Enhanced functionalities
+                                More robust build quality. <br>
+                                <b>-High-End Models:</b> $100 - $150+
+                                Premium materials
+                                Advanced features such as dedicated macro keys and detachable wrist rests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container p-4" data-aos="fade-up">
+            <p>Copyright 2024 NexGenAcc. All rights reserved.</p>
+            <p>Follow us on
+            <div class="socialIcons">
+                <a href="https://web.facebook.com/TaingVongMeng"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/vme.ng/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@vongmeng"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
